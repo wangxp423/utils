@@ -34,19 +34,19 @@ Utils Library For Android <br/>
   例子<br/>
   class MyActivity extends Activity implement MsgListener{<br/>
 
-      void onCreate(){<br/>
-          MsgCenter.addListener(this, "广播消息ID");<br/>
-      }<br/>
+      void onCreate(){  
+          MsgCenter.addListener(this, "广播消息ID");  
+      }  
       
-      void onMsg(Msg msg){<br/>
-          if(msg.is("广播消息ID")){<br/>
-              xlog.d("收到了广播");<br/>
-          }<br/>
-      }<br/>
+      void onMsg(Msg msg){  
+          if(msg.is("广播消息ID")){  
+              xlog.d("收到了广播");  
+          }  
+      }  
 
-      void onDestory(){<br/>
-          MsgCenter.remove(this);<br/>
-      }<br/>
+      void onDestory(){  
+          MsgCenter.remove(this);  
+      }  
       
   }<br/>
   可以在其他地方发出广播:<br/>
