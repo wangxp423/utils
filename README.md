@@ -38,7 +38,7 @@
   
 5. MsgCenter和Msg, 进程内的消息广播.<br/>
   例子<br/>
-  ```
+  `
   class MyActivity extends Activity implement MsgListener{  <br/>
       void onCreate(){  <br/>
           MsgCenter.addListener(this, "广播消息ID");  <br/>
@@ -52,7 +52,7 @@
           MsgCenter.remove(this);  <br/>
       }  <br/>
   }  <br/>
-  ``` <br/>
+  ` 
   
   可以在其他地方发出广播:<br/>
   ```
