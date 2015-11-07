@@ -1,15 +1,13 @@
 # 豆豆电话本开发总结
 ####以后会继续整理更新. 先提交简单的.
----------
-
--  ### xlog日志类. 
-
+-------------------------------------------
+- ### xlog日志类.
     例子
 ```
 xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
 ```
 >
-> * 可以打印任何类型, 异常会打印堆栈.
+> * 可以打印任何类型, 异常会打印堆栈.<br/>
 > * 对集合类打印规则做了处理, 比如List和Array输出类似[1,2,3], 而Map输出{1:"a",2:"b",3:"c"}
 > * 可以**自定义输出类**, 支持输出到logcat, 文件, stream
 > * 处于性能考虑, 对打印规则做了处理, 每N秒才会flush到输出, 默认输出到logcat.
@@ -17,8 +15,7 @@ xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
 > * 之所以使用小写类名xlog, 是因为"XLog"键盘敲起来不舒服, 仅此而已.
 
 
--  ### TaskHandle类, 后台队列执行类
-
+- ### TaskHandle类, 后台队列执行类
     例子:
 ```
     TaskHandler taskHandler = new TaskHandler();
@@ -68,4 +65,4 @@ xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
 > * ** 由于MsgCenter使用了静态数据结构来存储广播接收器, 因此, 使用完成后要注意及时注销监听, 以避免内存泄漏.**
 > * 建议在Activity或Fragment的onCreate中注册监听,  在onDestroy中注销监听. 或者onResume/onPause等.
 
--### 其他待续
+- ###  其他待续
