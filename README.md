@@ -4,9 +4,10 @@
 <br/>
 1. xlog 日志类. <br/>
   例子:　<br/>
-  ```java
+  ```
 　　　　xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
-  ```<br/>
+  ```
+  <br/>
   可以打印任何类型, 异常会打印堆栈.<br/>
   对集合类打印规则做了处理, 比如List和Array输出类似[1,2,3], 而Map输出{1:"a",2:"b",3:"c"}<br/>
   可以***自定义输出类***, 支持输出到logcat, 文件, stream<br/>
@@ -17,15 +18,16 @@
 
 2. TaskHandle类, 后台队列执行类<br/>
   例子:<br/>
-  ```java
-      TaskHandler taskHandler = new TaskHandler();<br/>
-      taskHandler.fore(new Runable(){<br/>
-          xlog.d("在主线程运行");<br/>
-      });<br/>
-      taskHandler.back(new Runable(){<br/>
-          xlog.d("在后台线程运行");<br/>
-      });<br/>
-  ``` <br/>
+  ```
+      TaskHandler taskHandler = new TaskHandler();
+      taskHandler.fore(new Runable(){
+          xlog.d("在主线程运行");
+      });
+      taskHandler.back(new Runable(){
+          xlog.d("在后台线程运行");
+      });
+  ``` 
+  <br/>
   其他方法, backFore现在后台线程运行一个方法onBac, 然后在主线程执行方法onFore.  foreBack类似.<br/>
 <br/>
 3. TaskUtil, 后台并发执行类, 跟TaskHandler类似, 不同的是, back方法在线程池中执行,是并发的.<br/>
@@ -36,7 +38,7 @@
   
 5. MsgCenter和Msg, 进程内的消息广播.<br/>
   例子<br/>
-  ```java
+  ```
   class MyActivity extends Activity implement MsgListener{  <br/>
       void onCreate(){  <br/>
           MsgCenter.addListener(this, "广播消息ID");  <br/>
@@ -53,11 +55,11 @@
   ``` <br/>
   
   可以在其他地方发出广播:<br/>
-  ```java
+  ```
     MsgCenter.fire("广播消息ID");
   ``` <br/>
   或者:<br/>
-  ```java
+  ```
     Msg.msg("广播消息ID").fire();
   ``` <br/>
   Msg对象可以携带参数, 也可以搜集返回值. <br/>
