@@ -17,10 +17,10 @@ Utils Library For Android <br/>
   例子:<br/>
       TaskHandler taskHandler = new TaskHandler();<br/>
       taskHandler.fore(new Runable(){<br/>
-        xlog.d("在主线程运行");<br/>
+          xlog.d("在主线程运行");<br/>
       });<br/>
       taskHandler.back(new Runable(){<br/>
-        xlog.d("在后台线程运行");<br/>
+          xlog.d("在后台线程运行");<br/>
       });<br/>
   其他方法, backFore现在后台线程运行一个方法onBac, 然后在主线程执行方法onFore.  foreBack类似.<br/>
 <br/>
@@ -33,18 +33,18 @@ Utils Library For Android <br/>
 5. MsgCenter和Msg, 进程内的消息广播.<br/>
   例子<br/>
   class MyActivity extends Activity implement MsgListener{<br/>
-    onCreate(){<br/>
-      MsgCenter.addListener(this, "广播消息ID");<br/>
-    }<br/>
-    onMsg(Msg msg){<br/>
-      if(msg.is("广播消息ID")){<br/>
-        xlog.d("收到了广播");<br/>
+      onCreate(){<br/>
+          MsgCenter.addListener(this, "广播消息ID");<br/>
       }<br/>
-    }<br/>
+      onMsg(Msg msg){<br/>
+          if(msg.is("广播消息ID")){<br/>
+              xlog.d("收到了广播");<br/>
+          }<br/>
+      }<br/>
 
-    onDestory(){<br/>
-      MsgCenter.remove(this);<br/>
-    }<br/>
+      onDestory(){<br/>
+          MsgCenter.remove(this);<br/>
+      }<br/>
   }<br/>
   可以在其他地方发出广播:<br/>
     MsgCenter.fire("广播消息ID");<br/>
