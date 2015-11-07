@@ -1,4 +1,4 @@
-# utils
+# 豆豆电话本开发总结
 Utils Library For Android <br/>
 <br/>
 这个项目是我在开发"豆豆电话本"时的一些总结. 以后会继续整理更新. 先提交简单的.<br/>
@@ -32,7 +32,7 @@ Utils Library For Android <br/>
   
 5. MsgCenter和Msg, 进程内的消息广播.<br/>
   例子<br/>
-  
+  <code>
   class MyActivity extends Activity implement MsgListener{  
 
       void onCreate(){  
@@ -50,6 +50,7 @@ Utils Library For Android <br/>
       }  
       
   }  
+  </code>
   
   可以在其他地方发出广播:<br/>
     MsgCenter.fire("广播消息ID");<br/>
