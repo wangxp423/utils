@@ -5,7 +5,9 @@ Utils Library For Android <br/>
 <br/>
 1. xlog 日志类. <br/>
   例子:　<br/>
-　　　　xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);<br/>
+  <code>
+　　　　xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
+  </code>
   可以打印任何类型, 异常会打印堆栈.<br/>
   对集合类打印规则做了处理, 比如List和Array输出类似[1,2,3], 而Map输出{1:"a",2:"b",3:"c"}<br/>
   可以自定义输出类, 支持输出到logcat, 文件, stream<br/>
@@ -15,13 +17,15 @@ Utils Library For Android <br/>
 <br/>
 2. TaskHandle类, 后台队列执行类<br/>
   例子:<br/>
-      TaskHandler taskHandler = new TaskHandler();<br/>
-      taskHandler.fore(new Runable(){<br/>
-          xlog.d("在主线程运行");<br/>
-      });<br/>
-      taskHandler.back(new Runable(){<br/>
-          xlog.d("在后台线程运行");<br/>
-      });<br/>
+  <code>
+      TaskHandler taskHandler = new TaskHandler();
+      taskHandler.fore(new Runable(){
+          xlog.d("在主线程运行");
+      });
+      taskHandler.back(new Runable(){
+          xlog.d("在后台线程运行");
+      });
+  </code>
   其他方法, backFore现在后台线程运行一个方法onBac, 然后在主线程执行方法onFore.  foreBack类似.<br/>
 <br/>
 3. TaskUtil, 后台并发执行类, 跟TaskHandler类似, 不同的是, back方法在线程池中执行,是并发的.<br/>
@@ -34,28 +38,28 @@ Utils Library For Android <br/>
   例子<br/>
   <code>
   class MyActivity extends Activity implement MsgListener{  
-
       void onCreate(){  
           MsgCenter.addListener(this, "广播消息ID");  
       }  
-      
       void onMsg(Msg msg){  
           if(msg.is("广播消息ID")){  
               xlog.d("收到了广播");  
           }  
       }  
-
       void onDestory(){  
           MsgCenter.remove(this);  
       }  
-      
   }  
   </code>
   
   可以在其他地方发出广播:<br/>
-    MsgCenter.fire("广播消息ID");<br/>
+  <code>
+    MsgCenter.fire("广播消息ID");
+  </code>
   或者:<br/>
-    Msg.msg("广播消息ID").fire();<br/>
+  <code>
+    Msg.msg("广播消息ID").fire();
+  </code>
   Msg对象可以携带参数, 也可以搜集返回值. <br/>
   <br/>
   由于MsgCenter使用了静态数据结构来存储广播接收器, 因此, 使用完成后要注意及时注销监听, 以避免内存泄漏.<br/>
