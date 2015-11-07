@@ -32,7 +32,8 @@ Utils Library For Android <br/>
   
 5. MsgCenter和Msg, 进程内的消息广播.<br/>
   例子<br/>
-  class MyActivity extends Activity implement MsgListener{<br/>
+  
+  class MyActivity extends Activity implement MsgListener{  
 
       void onCreate(){  
           MsgCenter.addListener(this, "广播消息ID");  
@@ -48,7 +49,8 @@ Utils Library For Android <br/>
           MsgCenter.remove(this);  
       }  
       
-  }<br/>
+  }  
+  
   可以在其他地方发出广播:<br/>
     MsgCenter.fire("广播消息ID");<br/>
   或者:<br/>
