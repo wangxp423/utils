@@ -2,7 +2,8 @@
 ####以后会继续整理更新. 先提交简单的.
 ---------
 
-- ### xlog 日志类. 
+-### xlog日志类. 
+
     例子
 ```
 xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
@@ -16,7 +17,7 @@ xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
 > * 之所以使用小写类名xlog, 是因为"XLog"键盘敲起来不舒服, 仅此而已.
 
 
-- ### TaskHandle类, 后台队列执行类
+-### TaskHandle类, 后台队列执行类
 
     例子:
 ```
@@ -67,4 +68,4 @@ xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
 > * ** 由于MsgCenter使用了静态数据结构来存储广播接收器, 因此, 使用完成后要注意及时注销监听, 以避免内存泄漏.**
 > * 建议在Activity或Fragment的onCreate中注册监听,  在onDestroy中注销监听. 或者onResume/onPause等.
 
-- ###  其他待续
+-### 其他待续
