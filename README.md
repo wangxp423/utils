@@ -2,7 +2,7 @@
 ####以后会继续整理更新. 先提交简单的.
 ---------
 
--### xlog日志类. 
+-  ### xlog日志类. 
 
     例子
 ```
@@ -17,7 +17,7 @@ xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
 > * 之所以使用小写类名xlog, 是因为"XLog"键盘敲起来不舒服, 仅此而已.
 
 
--### TaskHandle类, 后台队列执行类
+-  ### TaskHandle类, 后台队列执行类
 
     例子:
 ```
