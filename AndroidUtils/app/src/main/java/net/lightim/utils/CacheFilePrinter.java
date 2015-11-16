@@ -1,7 +1,9 @@
 package net.lightim.utils;
 
 import java.io.File;
-
+/**
+ * entaoyang@163.com
+ */
 public class CacheFilePrinter implements xlog.XPrinter {
 	xlog.FilePrinter p = null;
 

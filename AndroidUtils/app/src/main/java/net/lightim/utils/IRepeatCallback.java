@@ -1,5 +1,7 @@
 package net.lightim.utils;
-
+/**
+ * entaoyang@163.com
+ */
 public interface IRepeatCallback {
 	/**
 	 * @param index 第几次被调用

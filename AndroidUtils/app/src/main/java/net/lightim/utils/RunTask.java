@@ -7,7 +7,7 @@ import java.util.Hashtable;
 /**
  * 一种结果是执行完成, 另一个是被取消. 这两个都是结束状态
  *
- * @author yangentao@gmail.com
+ * @author entaoyang@163.com
  */
 public abstract class RunTask implements Runnable {
 	protected final static Hashtable<Integer, RunTask> map = new Hashtable<Integer, RunTask>(64);

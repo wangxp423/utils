@@ -11,7 +11,9 @@ import java.io.Serializable;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-
+/**
+ * entaoyang@163.com
+ */
 public class Values {
 	private ArrayMap<String, Object> map;
 

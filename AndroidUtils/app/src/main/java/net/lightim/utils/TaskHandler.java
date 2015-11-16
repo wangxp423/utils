@@ -2,7 +2,9 @@ package net.lightim.utils;
 
 import android.os.Handler;
 import android.os.HandlerThread;
-
+/**
+ * entaoyang@163.com
+ */
 public class TaskHandler {
 	private Handler back;
 	private HandlerThread thread;

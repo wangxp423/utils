@@ -7,7 +7,9 @@ import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
-
+/**
+ * entaoyang@163.com
+ */
 public class TaskUtil {
 	private static Handler main;
 	private static ExecutorService es;

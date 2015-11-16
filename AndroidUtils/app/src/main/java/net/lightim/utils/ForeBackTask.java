@@ -3,7 +3,9 @@ package net.lightim.utils;
 import android.os.Handler;
 
 import java.util.concurrent.ExecutorService;
-
+/**
+ * entaoyang@163.com
+ */
 public abstract class ForeBackTask extends RunTask {
 	private boolean first = true;
 	private Handler backHandler = null;

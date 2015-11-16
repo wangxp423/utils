@@ -29,6 +29,7 @@ import java.util.zip.GZIPInputStream;
 
 /**
  * Created by yet on 2015/11/15.
+ * entaoyang@163.com
  */
 public class Http {
 	public static class Result {

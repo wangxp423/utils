@@ -3,6 +3,10 @@ package net.lightim.utils;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 // 动作合并, 延时执行
+
+/**
+ * entaoyang@163.com
+ */
 public class ActionMerger {
 	private AtomicBoolean hasTimer = new AtomicBoolean(false);
 	private int millSedonds = 0;

@@ -1,5 +1,7 @@
 package net.lightim.utils;
-
+/**
+ * entaoyang@163.com
+ */
 public abstract class BackForeTask extends RunTask {
 	private boolean first = true;
 

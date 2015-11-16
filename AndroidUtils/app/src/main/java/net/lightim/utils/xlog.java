@@ -21,7 +21,7 @@ import java.util.Map;
  * 可以使用setLogLevel来设置log输出级别<br/>
  * 默认,在debug版本输出全部log, 在release版本输出info以上级别log(verbos和debug级别的不会被输出)
  *
- * @author yangentao 日志 Logcat日志级别: 0:禁用日志, 1:启用(所有日志), 2:verbose, 3: debug,
+ * @author entaoyang@163.com 日志 Logcat日志级别: 0:禁用日志, 1:启用(所有日志), 2:verbose, 3: debug,
  *         4:info, 5:warn, 6:error,
  */
 public class xlog {
