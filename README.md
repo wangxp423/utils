@@ -2,7 +2,7 @@
 ####以后会继续整理更新. 先提交简单的.
 -------------------------------------------
 
-- ### Http类
+-  ###  Http类
 
 简单使用
 `String s = Http.post(url2).arg("name", "yang").request().strUtf8();`
