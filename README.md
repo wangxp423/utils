@@ -2,6 +2,68 @@
 ####以后会继续整理更新. 先提交简单的.
 -------------------------------------------
 
+- ### Http类
+
+简单使用
+`String s = Http.post(url2).arg("name", "yang").request().strUtf8();`
+
+返回Json
+`JsonObject jo = Http.get(UPDATE_URL).arg("time", System.currentTimeMillis()).request().gsonObject();`
+
+多个参数
+```
+Http http = Http.post("http://xxx.com/abc.php");
+http.arg("msg", text);
+http.arg("imei", App.imei());
+http.arg("androidapi",  OS.API);
+http.arg("model", OS.model());
+JsonObject jo = http.request().gsonObject();
+```
+上传文件
+```
+String ret = Http.multipart(url).arg("time",System.currentTimeMillis()).file("file", new File("xxx")).request().strUtf8();
+```
+上传进度
+```
+String ret = Http.multipart(url).arg("time",System.currentTimeMillis()).file("file", new File("xxx"), new Http.Progress() {
+	@Override
+	public void onStart(int total) {
+
+	}
+
+	@Override
+	public void onProgress(int current, int total, int percent) {
+
+	}
+
+	@Override
+	public void onFinish() {
+
+	}
+}).request().strUtf8();
+```
+
+下载并保存到文件
+```
+boolean ok = Http.get(url_apk).request(new File("C:\\Users\\yet\\dou.apk"), new Http.Progress() {
+	@Override
+	public void onStart(int total) {
+		xlog.d("start", total);
+
+	}
+
+	@Override
+	public void onProgress(int current, int total, int percent) {
+		xlog.d("percent", percent);
+	}
+
+	@Override
+	public void onFinish() {
+		xlog.d("finish");
+	}
+	}).OK();
+```
+
 - ### xlog日志类.
     例子
 	xlog.d("Hello", argString, argInt, argArrray, argMap, argList, argObject);
